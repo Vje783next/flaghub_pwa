@@ -1,0 +1,54 @@
+<header>
+  <h1>Flags APP</h1>
+  <div>
+    <button (click)="tabla()"><mat-icon>view_list</mat-icon></button>
+    <button (click)="cards()"><mat-icon>grid_view</mat-icon></button>
+  </div>
+</header>
+
+@if (loadingFlags) {
+  <div class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+}
+
+@if(showTabla && !loadingFlags) {
+  <section class="table container">
+    <table mat-table [dataSource]="flags()" class="mat-elevation-z8">
+    
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef> Image </th>
+        <td mat-cell *matCellDef="let element">
+          <img src="{{element.flags.png}}" alt="element.name.official" width="50px"></td>
+      </ng-container>
+    
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name.official}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+    </table>
+  
+  </section>
+}
+
+@if(showCards && !loadingFlags) {
+  <section class="cards container">
+    @for (flag of flags(); track flag.cca3) {
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{flag.name.official}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img mat-card-image [src]="flag.flags.png" [alt]="flag.name.official">
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton [routerLink]="['/flags', flag.cca3]">See more details</button>
+        </mat-card-actions>
+      </mat-card>  
+    }
+  </section>
+}
