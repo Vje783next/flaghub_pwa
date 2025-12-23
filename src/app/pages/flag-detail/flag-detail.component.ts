@@ -26,11 +26,11 @@ export class FlagDetailComponent {
       alt: '',
     },
     cca3: '',
-    capital: '',
+    capital: [],
     region: '',
     population: 0,
-    currency: '',
-    language: ''
+    currencies: {},
+    languages: {}
   })
 
   readonly panelOpenState = signal(false);
@@ -53,7 +53,13 @@ export class FlagDetailComponent {
     }
   }
 
-  showalldetails(): void {
-    
-  }
+  languages = (() =>
+    Object.values(this.flagDetail().languages).join(', ')
+  );
+  
+  currency = (() => {
+    const c = Object.values(this.flagDetail().currencies)[0];
+    return c ? `${c.name}` : '';
+  });
+  
 }

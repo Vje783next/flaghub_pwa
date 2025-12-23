@@ -1,9 +1,9 @@
 <header class="header">
-  <img src="assets/icon-128x128.png" alt="logo de Flag Hub">
-  <h1>Flag Hub</h1>
+  <img src="logo.png" alt="logo de Flag Hub">
+  <h1 class="header__title">Flag Hub</h1>
   <div>
-    <button (click)="tabla()"><mat-icon>view_list</mat-icon></button>
-    <button (click)="cards()"><mat-icon>grid_view</mat-icon></button>
+    <button class="header__btn" (click)="tabla()"><mat-icon>view_list</mat-icon></button>
+    <button class="header__btn" (click)="cards()"><mat-icon>grid_view</mat-icon></button>
   </div>
 </header>
 
@@ -13,6 +13,28 @@
 </div>
 }
 
+@if(showTabla && !loadingFlags) {
+<section class="table">
+  <app-grid 
+    [flags]="flags()"
+  ></app-grid>
+</section>
+}
+
+@if(showCards && !loadingFlags) {
+<section class="cards" [@flagsAnimation]>
+  @for (flag of flags(); track flag.cca3) {
+  <app-card 
+    [name]="flag.name.official" 
+    [flag]="flag.flags.png" 
+    [cca3]="flag.cca3"
+  >
+  </app-card>
+  }
+</section>
+}
+
+<!--
 @if(showTabla && !loadingFlags) {
 <section class="table container">
   <table mat-table [dataSource]="flags()" class="mat-elevation-z8">
@@ -41,7 +63,8 @@
 
 </section>
 }
-
+-->
+<!--
 @if(showCards && !loadingFlags) {
 <section class="cards container">
   @for (flag of flags(); track flag.cca3) {
@@ -60,3 +83,5 @@
   }
 </section>
 }
+
+-->

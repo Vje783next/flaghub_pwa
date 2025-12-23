@@ -1,20 +1,19 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  width: 80%;
+  align-items: center;
   max-width: 500px;
   margin-inline: auto;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 0 5px #888;
 }
 
 .card__header {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   border-bottom: 2px solid #eee;
 }
 
@@ -29,25 +28,24 @@
   width: calc(100% + 32px);
   max-width: 100%;
   border-radius: 5px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px #444;
 }
 
 .card__content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 20px 30px;
+  gap: 20px;
+  padding: 20px;
   width: 100%;
 }
 
-
 .card__btn {
+  display: block;
   width: 100%;
-  margin: 20px 0;
+  margin: 10px;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
-  font-size: 16px;
   font-weight: 600;
   background-color: #111;
   color: #fff;

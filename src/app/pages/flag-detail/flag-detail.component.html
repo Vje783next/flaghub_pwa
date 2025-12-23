@@ -6,12 +6,12 @@
         <mat-card-title class="card__title">{{ flagDetail().name.official }}</mat-card-title>
       </mat-card-header>
       <mat-card-content class="card__content">
-        <img mat-card-image class="card__image" [src]="flagDetail().flags.png" [alt]="flagDetail().flags.alt || flagDetail().name.official"
-        width="400">
+        <img mat-card-image class="card__image" [src]="flagDetail().flags.png"
+          [alt]="flagDetail().flags.alt || flagDetail().name.official" width="400">
         <mat-accordion class="card__accordion">
           <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
             <mat-expansion-panel-header>
-              <mat-panel-title> More Details</mat-panel-title>
+              <mat-panel-title> MORE DETAILS</mat-panel-title>
               <mat-panel-description>
                 {{panelOpenState() ? '' : ''}}
               </mat-panel-description>
@@ -19,6 +19,9 @@
             <p><strong>Capital:</strong> {{ flagDetail().capital }}</p>
             <p><strong>Region:</strong> {{ flagDetail().region }}</p>
             <p><strong>Population:</strong> {{ flagDetail().population | number }}</p>
+            <p><strong>Languages:</strong> {{ languages() }}</p>
+            <p><strong>Currency:</strong> {{ currency() }}</p>
+        
           </mat-expansion-panel>
         </mat-accordion>
       </mat-card-content>
