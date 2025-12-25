@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   padding: 5px 10px;
-  margin: 10px;
+  margin: 5px;
   border: none;
   border-radius: 5px;
   background-color: #aaa;
@@ -33,6 +33,25 @@
 .header__btn mat-icon {
   font-size: 24px;
   line-height: 1;
+}
+
+@media (max-width: 480px) {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__title {
+    font-size: 2rem;
+  }
+
+  .header__logo {
+    width: 75px;
+  }
+
+  .header__btn {
+  }
 }
 
 
