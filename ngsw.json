@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1766473249147,
+  "timestamp": 1766677532361,
   "index": "/flaghub_pwa/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/flaghub_pwa/favicon.ico",
         "/flaghub_pwa/index.html",
-        "/flaghub_pwa/main-X4W4VJFY.js",
+        "/flaghub_pwa/main-IH6J5FFB.js",
         "/flaghub_pwa/manifest.webmanifest",
         "/flaghub_pwa/polyfills-B6TNHZQ6.js",
         "/flaghub_pwa/styles-36AW6TKX.css"
@@ -85,9 +85,9 @@
     "/flaghub_pwa/icons_angular/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/flaghub_pwa/icons_angular/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/flaghub_pwa/icons_angular/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/flaghub_pwa/index.html": "0951c2e40dec530e37988b30c90d5bd064ad2bc2",
+    "/flaghub_pwa/index.html": "5301fbb7d860be2e20a325ea31a392363d50039d",
     "/flaghub_pwa/logo.png": "e6856d8e88b9d2b430721f8098f5ece5ada15778",
-    "/flaghub_pwa/main-X4W4VJFY.js": "2e775772f10418284f480a9689e85c24dba5e5a5",
+    "/flaghub_pwa/main-IH6J5FFB.js": "70dde66e3c5af30179ed3cfda8549264f8fe3128",
     "/flaghub_pwa/manifest.webmanifest": "665cd0a67e561b170653a694570c22966afa8ffb",
     "/flaghub_pwa/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
     "/flaghub_pwa/styles-36AW6TKX.css": "173fa74a40cd51f896da8df76e2a21ac7900097e"
