@@ -28,7 +28,7 @@
   width: calc(100% + 32px);
   max-width: 100%;
   border-radius: 5px;
-  box-shadow: 0 5px 10px #444;
+  box-shadow: 0 5px 5px #444;
 }
 
 .card__content {
@@ -41,6 +41,7 @@
 
 .card__btn {
   display: block;
+  margin-left: auto;
   width: 100%;
   margin: 10px;
   padding: 10px;
@@ -55,4 +56,3 @@
 .card__btn:hover {
   background-color: #333;
 }
-

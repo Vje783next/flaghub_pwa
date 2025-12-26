@@ -54,7 +54,6 @@
   }
 }
 
-
 .table {
     display: flex;
     justify-content: center;
@@ -69,4 +68,11 @@
   gap: 30px;
   justify-items: center;
   padding: 30px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

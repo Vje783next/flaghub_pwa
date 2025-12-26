@@ -15,23 +15,32 @@
 
 @if(showTabla && !loadingFlags) {
 <section class="table">
-  <app-grid 
-    [flags]="flags()"
-  ></app-grid>
+  <app-grid [flags]="currentPageFlags()"></app-grid>
 </section>
+
+<mat-paginator
+  [length]="flags().length"
+  [pageSize]="pageSize()"
+  [pageSizeOptions]="[25]"
+  (page)="onPageChange($event)">
+</mat-paginator>
 }
 
 @if(showCards && !loadingFlags) {
 <section class="cards" [@flagsAnimation]>
-  @for (flag of flags(); track flag.cca3) {
-  <app-card 
-    [name]="flag.name.official" 
-    [flag]="flag.flags.png" 
-    [cca3]="flag.cca3"
-  >
+  @for (flag of currentPageFlags(); track flag.cca3){
+  <app-card [name]="flag.name.official" [flag]="flag.flags.png" [cca3]="flag.cca3">
   </app-card>
   }
 </section>
+
+<mat-paginator
+  [length]="flags().length"
+  [pageSize]="pageSize()"
+  [pageSizeOptions]="[25]"
+  (page)="onPageChange($event)">
+</mat-paginator>
+
 }
 
 <!--
